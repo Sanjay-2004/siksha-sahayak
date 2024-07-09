@@ -68,24 +68,24 @@ const Navbar = () => {
                     <div className='flex items-center gap-16'>
                         <Link to='/final-verdict' className=' hover:text-gray-300'>Final Verdict</Link>
                         <Link to='/all-issues' className=' hover:text-gray-300'>All Issues</Link>
-                        {/* <>
-                        {!user ? (
-                            <Dialog>
-                                <DialogTrigger asChild>
-                                    <Button>Login</Button>
-                                </DialogTrigger>
+                        <>
+                            {!user ? (
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Button>Login</Button>
+                                    </DialogTrigger>
 
-                                <DialogContent className='max-w-md'>
-                                    <DialogHeader>
-                                        <DialogTitle>This is for Verifiers Only</DialogTitle>
-                                    </DialogHeader>
-                                    <Input type="text" className='mt-4' placeholder="Enter UserName" ref={userNameRef} />
-                                    <Input type="password" className='mt-4 mb-4' placeholder="Enter Password" ref={passRef} />
-                                    <Button onClick={handleLogin}>Login</Button>
-                                </DialogContent>
-                            </Dialog>
-                        ) : (<Button onClick={handleLogout}>Logout</Button>)}
-                        </> */}
+                                    <DialogContent className='max-w-md'>
+                                        <DialogHeader>
+                                            <DialogTitle>This is for Verifiers Only</DialogTitle>
+                                        </DialogHeader>
+                                        <Input type="text" className='mt-4' placeholder="Enter UserName" ref={userNameRef} />
+                                        <Input type="password" className='mt-4 mb-4' placeholder="Enter Password" ref={passRef} />
+                                        <Button onClick={handleLogin}>Login</Button>
+                                    </DialogContent>
+                                </Dialog>
+                            ) : (<Button onClick={handleLogout}>Logout</Button>)}
+                        </>
                     </div>
                 </nav>
                 <Outlet />
