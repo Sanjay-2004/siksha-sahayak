@@ -71,6 +71,8 @@ const Allatone = () => {
   }, []);
 
   const filterProblemsByStatus = (status) => {
+    if (status === "null") return problems;
+
     return problems.filter(problem => problem.status === status);
   };
 
@@ -130,7 +132,7 @@ const Allatone = () => {
                       {/* <div className="mx-12 my-4">
                         <label className="mx-2">Unit Test:</label>
                         <select onChange={(e) => setUnitTestFilter(e.target.value)} value={unitTestFilter}>
-                          <option value="">All</option>
+                          <option value="null">All</option>
                           {uniqueValues('unitTest').map((value, index) => (
                             <option key={index} value={value}>{value}</option>
                           ))}
@@ -138,7 +140,7 @@ const Allatone = () => {
 
                         <label className="mx-2">Subject:</label>
                         <select onChange={(e) => setSubjectFilter(e.target.value)} value={subjectFilter}>
-                          <option value="">All</option>
+                          <option value="null">All</option>
                           {uniqueValues('subject').map((value, index) => (
                             <option key={index} value={value}>{value}</option>
                           ))}
@@ -146,7 +148,7 @@ const Allatone = () => {
 
                         <label className="mx-2">Section:</label>
                         <select onChange={(e) => setSectionFilter(e.target.value)} value={sectionFilter}>
-                          <option value="">All</option>
+                          <option value="null">All</option>
                           {uniqueValues('section').map((value, index) => (
                             <option key={index} value={value}>{value}</option>
                           ))}
@@ -158,6 +160,7 @@ const Allatone = () => {
                             <SelectValue placeholder="Unit Test" />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="null">All</SelectItem>
                             {uniqueValues('unitTest').map((value, index) => (
                               <SelectItem key={index} value={value}>{value}</SelectItem>
                             ))}
@@ -168,6 +171,7 @@ const Allatone = () => {
                             <SelectValue placeholder="Subject" />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="null">All</SelectItem>
                             {uniqueValues('subject').map((value, index) => (
                               <SelectItem key={index} value={value}>{value}</SelectItem>
                             ))}
@@ -178,6 +182,7 @@ const Allatone = () => {
                             <SelectValue placeholder="Section" />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="null">All</SelectItem>
                             {uniqueValues('section').map((value, index) => (
                               <SelectItem key={index} value={value}>{value}</SelectItem>
                             ))}
@@ -211,6 +216,7 @@ const Allatone = () => {
                             <SelectValue placeholder="Unit Test" />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="null">All</SelectItem>
                             {uniqueValues('unitTest').map((value, index) => (
                               <SelectItem key={index} value={value}>{value}</SelectItem>
                             ))}
@@ -221,6 +227,7 @@ const Allatone = () => {
                             <SelectValue placeholder="Subject" />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="null">All</SelectItem>
                             {uniqueValues('subject').map((value, index) => (
                               <SelectItem key={index} value={value}>{value}</SelectItem>
                             ))}
@@ -231,6 +238,7 @@ const Allatone = () => {
                             <SelectValue placeholder="Section" />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="null">All</SelectItem>
                             {uniqueValues('section').map((value, index) => (
                               <SelectItem key={index} value={value}>{value}</SelectItem>
                             ))}
