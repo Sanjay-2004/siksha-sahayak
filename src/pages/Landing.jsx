@@ -65,8 +65,8 @@ export default function Landing() {
                                         <SelectItem value="fs-a1" >FS-A1</SelectItem>
                                     </SelectContent>
                                 </Select>
-                                <Button className="mt-4" type="submit">Submit</Button>
-                                {/* <button className="mt-4 ms-1 px-4 py-2 bg-red-700 text-white rounded-sm disabled:cursor-not-allowed" disabled type="submit">Submit</button> */}
+                                {/* <Button className="mt-4" type="submit">Submit</Button> */}
+                                <button className="mt-4 ms-1 px-4 py-2 bg-red-700 text-white rounded-sm disabled:cursor-not-allowed" disabled type="submit">Submit</button>
                             </form>
                         </CardContent>
                     </Card>
